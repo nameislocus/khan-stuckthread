@@ -24,7 +24,7 @@ WebLogic에서는 Hogging 스레드는 정확히 몇 초이상 실행되는 스�
 
 ## Stuck Thread 모니터링 설정 방법
 JBoss의 웹 서브시스템에 아래와 같이 StuckThread Monitoring Valve를 설정하면 됩니다.
-------------------------------------------
+
 ```
 <valve name="stuckthreadValve" module="com.opennaru.khan.stuckthread" class-name="com.opennaru.khan.stuckthread.StuckThreadDetectionValve">
     <param param-name="stuckThreshold" param-value="600"/>
@@ -41,7 +41,7 @@ StuckThread에 대한 모니터링 정보를 추가된 MBean을 통해서 확인
 </div>
 
 StuckThread가 발생하면 stdout에 호출한 URL 정보와 Stuck Thread가 발생한 애플리케이션을 확인할 수 있도록, StackTrace가 다음과 같이 표시됩니다.
-------------------------------------------
+
 ## Stuck Thread STDOUT 출력
 ```
 10:44:50,192 WARN  [com.opennaru.khan.stuckthread.StuckThreadDetectionValve] (ContainerBackgroundProcessor[StandardEngine[jboss.web]]) stuckThreadDetectionValve.notifyStuckThreadDetected
