@@ -25,17 +25,17 @@ JBoss의 웹 서브시스템에 아래와 같이 StuckThread Monitoring Valve를
 ------------------------------------------
 ## Commands
 ```
-            <valve name="stuckthreadValve" module="com.opennaru.khan.stuckthread" class-name="com.opennaru.khan.stuckthread.StuckThreadDetectionValve">
-                <param param-name="stuckThreshold" param-value="600"/>
-                <param param-name="hoggingThreshold" param-value="60"/>
-            </valve>
+<valve name="stuckthreadValve" module="com.opennaru.khan.stuckthread" class-name="com.opennaru.khan.stuckthread.StuckThreadDetectionValve">
+    <param param-name="stuckThreshold" param-value="600"/>
+    <param param-name="hoggingThreshold" param-value="60"/>
+</valve>
 ```
 
 빌드한 jar 파일은 com/opennaru/khan/stuckthread/main 디렉터리에 복사한 후 모듈로 등록하여야 합니다.
 
 StuckThread에 대한 모니터링 정보를 추가된 MBean을 통해서 확인할 수 있습니다.
 <div align="center">
-  <p><img src="https://github.com/nameislocus/khan-stuckthread/blob/master/resources/config/stuckthread-mbean.png"></p>
+  <p><img src="https://raw.github.com/nameislocus/khan-stuckthread/master/resources/config/stuckthread-mbean.png"></p>
 </div>
 
 StuckThread가 발생하면 stdout에 호출한 URL 정보와 Stuck Thread가 발생한 애플리케이션을 확인할 수 있도록, StackTrace가 다음과 같이 표시됩니다.
