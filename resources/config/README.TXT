@@ -66,4 +66,3 @@ stuckThreshold=10
 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:102) [jbossweb-7.2.2.Final-redhat-1.jar:7.2.2.Final-[0m10:46:20,205 INFO  [stdout] (ContainerBackgroundProcessor[StandardEngine[jboss.web]]) KhanSessionManager/instance=com.opennaru.khan.session.manager.KhanSessionManager@65067a13
 
 
-

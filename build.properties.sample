@@ -1,0 +1,4 @@
+jboss.modules=/home/jjeon/jboss/eap/jboss-eap-6.2/modules/system/layers/ext
+
+# windows
+# jboss.modules=d:/Java/jboss/eap/jboss-eap-6.2/modules/system/layers/ext
