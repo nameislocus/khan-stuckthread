@@ -7,10 +7,10 @@ WebLogic에서는 StuckThread를 모니터링 할 수 있습니다.
 문서에는 정확하게 몇 초라고 지정되어 있진 않지만, Stuck Thread가 되기 전 단계인 Hogging Thread라는 단계도 하나 더 있습니다.
 
 스레드의 실행 상태 단계를 보면 아래와 같습니다.
-
-> Standby ==> Active ==> Hogging ==> Stuck
->         <==--------------------------+               
-
+```
+ Standby ==> Active ==> Hogging ==> Stuck
+         <==--------------------------+               
+```
 
 JBoss에서는 이런 Stuck Thread를 모니터링하는 방법이 없습니다.
 그래서, JBoss에서도 WebLogic 처럼 Stuck Thread를 모니터링하는 Valve를 만들었습니다.
@@ -23,7 +23,6 @@ WebLogic에서는 Hogging 스레드는 정확히 몇 초이상 실행되는 스�
 
 JBoss의 웹 서브시스템에 아래와 같이 StuckThread Monitoring Valve를 설정하면 됩니다.
 ------------------------------------------
-## Commands
 ```
 <valve name="stuckthreadValve" module="com.opennaru.khan.stuckthread" class-name="com.opennaru.khan.stuckthread.StuckThreadDetectionValve">
     <param param-name="stuckThreshold" param-value="600"/>
