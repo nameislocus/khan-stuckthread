@@ -25,7 +25,7 @@ WebLogic에서는 Hogging 스레드는 정확히 몇 초이상 실행되는 스�
 ## Stuck Thread 모니터링 설정 방법
 JBoss의 웹 서브시스템에 아래와 같이 StuckThread Monitoring Valve를 설정하면 됩니다.
 
-```
+```xml
 <valve name="stuckthreadValve" module="com.opennaru.khan.stuckthread" class-name="com.opennaru.khan.stuckthread.StuckThreadDetectionValve">
     <param param-name="stuckThreshold" param-value="600"/>
     <param param-name="hoggingThreshold" param-value="60"/>
